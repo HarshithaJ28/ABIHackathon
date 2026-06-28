@@ -12,8 +12,18 @@ from src.lexicon import match_terms, WOUND_ICD_PREFIXES
 
 REQUIRED = ["wound_type", "location", "length_cm", "width_cm", "depth_cm", "drainage_amount"]
 
-_TRIPLE = re.compile(r"(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)", re.I)
-_PAIR   = re.compile(r"(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)", re.I)
+_TRIPLE = re.compile(
+    r"(\d+(?:\.\d+)?)\s*(?:cm|mm)?\s*[x×]\s*"
+    r"(\d+(?:\.\d+)?)\s*(?:cm|mm)?\s*[x×]\s*"
+    r"(\d+(?:\.\d+)?)",
+    re.I
+)
+_PAIR = re.compile(
+    r"(\d+(?:\.\d+)?)\s*(?:cm|mm)?\s*[x×]\s*"
+    r"(\d+(?:\.\d+)?)",
+    re.I
+)
+
 _DEPTH  = re.compile(r"depth[:\s]*(\d+(?:\.\d+)?)|(\d+(?:\.\d+)?)\s*cm\s*deep", re.I)
 _LABELED = {
     "length_cm": re.compile(r"length[:\s]+(\d+(?:\.\d+)?)", re.I),

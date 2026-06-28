@@ -20,6 +20,10 @@ from rich.table import Table
 from config import CONCURRENCY_MAX, FACILITY_IDS
 from src.engine import Job, Stats, run_jobs
 
+import asyncio, sys
+if sys.platform.startswith("win"):
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    
 RAW_DIR = "data/raw"
 
 
