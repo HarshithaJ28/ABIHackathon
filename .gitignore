@@ -5,3 +5,4 @@ data/
 *.egg-info/
 .venv/
 venv/
+context.md
