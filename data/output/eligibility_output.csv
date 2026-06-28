@@ -1,0 +1,301 @@
+id,patient_id,facility_id,facility,first_name,last_name,name,birth_date,gender,primary_payer_code,has_part_b,decision,reason
+1,FA-001,101,Facility A,Agnes,Dunbar,Agnes Dunbar,1942-05-04,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+2,FA-002,101,Facility A,Leon,Dawson,Leon Dawson,1943-02-25,Male,HMO,False,reject,No active Medicare Part B coverage
+3,FA-003,101,Facility A,Philip,Oates,Philip Oates,1936-05-29,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+4,FA-004,101,Facility A,Virginia,Donnelly,Virginia Donnelly,1937-03-31,Female,MCD,False,reject,No active Medicare Part B coverage
+5,FA-005,101,Facility A,Kristina,Bergstrom,Kristina Bergstrom,1940-04-08,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+6,FA-006,101,Facility A,Helen,Reyes,Helen Reyes,1954-04-01,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+7,FA-007,101,Facility A,Ima,Stanton,Ima Stanton,1956-03-07,Female,MCD,False,reject,No active Medicare Part B coverage
+8,FA-008,101,Facility A,Eleanor,Yates,Eleanor Yates,1935-11-14,Female,HMO,False,reject,No active Medicare Part B coverage
+9,FA-009,101,Facility A,Roscoe,Dunbar,Roscoe Dunbar,1941-02-17,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+10,FA-010,101,Facility A,Oliver,Watts,Oliver Watts,1935-08-04,Male,HMO,False,reject,No active Medicare Part B coverage
+11,FA-011,101,Facility A,Ethel,Upton,Ethel Upton,1947-12-05,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+12,FA-012,101,Facility A,Robert,Coleman,Robert Coleman,1933-08-13,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+13,FA-013,101,Facility A,Melvin,Figueroa,Melvin Figueroa,1948-11-28,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+14,FA-014,101,Facility A,Harriet,Yuen,Harriet Yuen,1943-07-13,Female,HMO,False,reject,No active Medicare Part B coverage
+15,FA-015,101,Facility A,Vernon,Ramirez,Vernon Ramirez,1956-09-28,Male,HMO,False,reject,No active Medicare Part B coverage
+16,FA-016,101,Facility A,Olive,Larsson,Olive Larsson,1946-03-10,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+17,FA-017,101,Facility A,Morris,Jefferson,Morris Jefferson,1957-09-28,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+18,FA-018,101,Facility A,Leonard,Valentine,Leonard Valentine,1954-03-23,Male,MCA,False,reject,No active Medicare Part B coverage
+19,FA-019,101,Facility A,Ivan,Oneal,Ivan Oneal,1930-01-19,Male,HMO,False,reject,No active Medicare Part B coverage
+20,FA-020,101,Facility A,Vernon,Jacobs,Vernon Jacobs,1952-10-10,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+21,FA-021,101,Facility A,Hannah,Reyes,Hannah Reyes,1936-12-04,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+22,FA-022,101,Facility A,Oliver,Webb,Oliver Webb,1940-10-20,Male,MCA,False,reject,No active Medicare Part B coverage
+23,FA-023,101,Facility A,Kristina,Lefebvre,Kristina Lefebvre,1931-10-08,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+24,FA-024,101,Facility A,Ralph,Nakamura,Ralph Nakamura,1932-01-13,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+25,FA-025,101,Facility A,Evelyn,Perry,Evelyn Perry,1956-10-14,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+26,FA-026,101,Facility A,Hubert,Kim,Hubert Kim,1957-08-04,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+27,FA-027,101,Facility A,Howard,Nkrumah,Howard Nkrumah,1933-10-30,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+28,FA-028,101,Facility A,Xenia,Jensen,Xenia Jensen,1946-11-16,Female,MCA,False,reject,No active Medicare Part B coverage
+29,FA-029,101,Facility A,Fannie,Dunbar,Fannie Dunbar,1931-11-25,Female,MCA,False,reject,No active Medicare Part B coverage
+30,FA-030,101,Facility A,Simon,Fleming,Simon Fleming,1944-07-01,Male,HMO,False,reject,No active Medicare Part B coverage
+31,FA-031,101,Facility A,Howard,Yates,Howard Yates,1934-03-29,Male,MCD,False,reject,No active Medicare Part B coverage
+32,FA-032,101,Facility A,Una,Haynes,Una Haynes,1954-03-19,Female,HMO,False,reject,No active Medicare Part B coverage
+33,FA-033,101,Facility A,Nettie,Abbott,Nettie Abbott,1931-03-13,Female,MCA,False,reject,No active Medicare Part B coverage
+34,FA-034,101,Facility A,Kristina,Warren,Kristina Warren,1955-10-18,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+35,FA-035,101,Facility A,Pearl,Yuen,Pearl Yuen,1951-06-20,Female,HMO,False,reject,No active Medicare Part B coverage
+36,FA-036,101,Facility A,Wilfred,Newton,Wilfred Newton,1931-11-25,Male,HMO,False,reject,No active Medicare Part B coverage
+37,FA-037,101,Facility A,Floyd,Lawson,Floyd Lawson,1942-10-23,Male,HMO,False,reject,No active Medicare Part B coverage
+38,FA-038,101,Facility A,Norma,Lynch,Norma Lynch,1952-07-22,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+39,FA-039,101,Facility A,Wilfred,Haines,Wilfred Haines,1935-11-13,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+40,FA-040,101,Facility A,Oliver,Webb,Oliver Webb,1957-05-30,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+41,FA-041,101,Facility A,Helen,Holt,Helen Holt,1951-07-21,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+42,FA-042,101,Facility A,Olive,Kaczmarek,Olive Kaczmarek,1942-11-26,Female,HMO,False,reject,No active Medicare Part B coverage
+43,FA-043,101,Facility A,Jean,Jennings,Jean Jennings,1937-11-20,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+44,FA-044,101,Facility A,Russel,Nguyen,Russel Nguyen,1930-04-22,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+45,FA-045,101,Facility A,Doris,Xavier,Doris Xavier,1953-05-05,Female,MCA,False,reject,No active Medicare Part B coverage
+46,FA-046,101,Facility A,Calvin,Elliot,Calvin Elliot,1933-08-07,Male,HMO,False,reject,No active Medicare Part B coverage
+47,FA-047,101,Facility A,Irene,Nakamura,Irene Nakamura,1952-08-08,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+48,FA-048,101,Facility A,Ethel,Nguyen,Ethel Nguyen,1941-06-09,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+49,FA-049,101,Facility A,Oscar,Vanhook,Oscar Vanhook,1938-10-20,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+50,FA-050,101,Facility A,Willis,Quinn,Willis Quinn,1947-10-21,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+51,FA-051,101,Facility A,Jean,Watts,Jean Watts,1930-09-14,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+52,FA-052,101,Facility A,Edna,Kowalski,Edna Kowalski,1942-01-08,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+53,FA-053,101,Facility A,Carl,Nakamura,Carl Nakamura,1942-01-23,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+54,FA-054,101,Facility A,Thelma,Elliot,Thelma Elliot,1942-07-29,Female,MCA,False,reject,No active Medicare Part B coverage
+55,FA-055,101,Facility A,Emil,Espinoza,Emil Espinoza,1930-06-22,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+56,FA-056,101,Facility A,Clifford,Thornton,Clifford Thornton,1957-07-19,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+57,FA-057,101,Facility A,Della,Frazier,Della Frazier,1948-12-23,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+58,FA-058,101,Facility A,Luther,Ewing,Luther Ewing,1952-03-21,Male,MCD,False,reject,No active Medicare Part B coverage
+59,FA-059,101,Facility A,Phyllis,Figueroa,Phyllis Figueroa,1948-06-18,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+60,FA-060,101,Facility A,Dorothy,Lefebvre,Dorothy Lefebvre,1950-08-13,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+61,FA-061,101,Facility A,Theodore,Elliot,Theodore Elliot,1935-12-22,Male,HMO,False,reject,No active Medicare Part B coverage
+62,FA-062,101,Facility A,Perry,Jefferson,Perry Jefferson,1933-03-09,Male,MCD,False,reject,No active Medicare Part B coverage
+63,FA-063,101,Facility A,Irene,Nguyen,Irene Nguyen,1933-11-13,Female,MCA,False,reject,No active Medicare Part B coverage
+64,FA-064,101,Facility A,Bernard,Obrien,Bernard Obrien,1934-08-13,Male,MCD,False,reject,No active Medicare Part B coverage
+65,FA-065,101,Facility A,Gertrude,Coleman,Gertrude Coleman,1945-07-16,Female,HMO,False,reject,No active Medicare Part B coverage
+66,FA-066,101,Facility A,Gilbert,Watts,Gilbert Watts,1948-03-27,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+67,FA-067,101,Facility A,Emma,Ibarra,Emma Ibarra,1941-08-11,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+68,FA-068,101,Facility A,Wilfred,Fleming,Wilfred Fleming,1952-07-15,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+69,FA-069,101,Facility A,Donald,Tanner,Donald Tanner,1931-09-14,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+70,FA-070,101,Facility A,Della,Greer,Della Greer,1955-06-16,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+71,FA-071,101,Facility A,Edna,Dawson,Edna Dawson,1934-03-06,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+72,FA-072,101,Facility A,Clara,Elliot,Clara Elliot,1946-07-28,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+73,FA-073,101,Facility A,Julia,Ibarra,Julia Ibarra,1953-06-10,Female,MCA,False,reject,No active Medicare Part B coverage
+74,FA-074,101,Facility A,Ruth,Vega,Ruth Vega,1952-09-25,Female,MCA,False,reject,No active Medicare Part B coverage
+75,FA-075,101,Facility A,Ivan,Medina,Ivan Medina,1930-05-26,Male,MCA,False,reject,No active Medicare Part B coverage
+76,FA-076,101,Facility A,Curtis,Frazier,Curtis Frazier,1931-08-02,Male,MCD,False,reject,No active Medicare Part B coverage
+77,FA-077,101,Facility A,Queenie,Goldstein,Queenie Goldstein,1952-06-13,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+78,FA-078,101,Facility A,Martha,Vance,Martha Vance,1930-03-09,Female,HMO,False,reject,No active Medicare Part B coverage
+79,FA-079,101,Facility A,Charlotte,Xiong,Charlotte Xiong,1930-06-02,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+80,FA-080,101,Facility A,Rosa,Nakamura,Rosa Nakamura,1937-08-25,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+81,FA-081,101,Facility A,Vera,Yuen,Vera Yuen,1953-06-19,Female,HMO,False,reject,No active Medicare Part B coverage
+82,FA-082,101,Facility A,Francis,Watts,Francis Watts,1935-04-29,Male,MCA,False,reject,No active Medicare Part B coverage
+83,FA-083,101,Facility A,Frank,Ortega,Frank Ortega,1956-05-31,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+84,FA-084,101,Facility A,Beverly,Ingram,Beverly Ingram,1957-12-31,Female,HMO,False,reject,No active Medicare Part B coverage
+85,FA-085,101,Facility A,Lewis,Okonkwo,Lewis Okonkwo,1930-08-01,Male,HMO,False,reject,No active Medicare Part B coverage
+86,FA-086,101,Facility A,Ima,Coleman,Ima Coleman,1954-02-02,Female,MCA,False,reject,No active Medicare Part B coverage
+87,FA-087,101,Facility A,Doris,Haynes,Doris Haynes,1954-02-18,Female,MCD,False,reject,No active Medicare Part B coverage
+88,FA-088,101,Facility A,Yvonne,Valentine,Yvonne Valentine,1934-10-05,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+89,FA-089,101,Facility A,Frances,Sanchez,Frances Sanchez,1957-10-16,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+90,FA-090,101,Facility A,Una,Nielsen,Una Nielsen,1931-05-27,Female,MCD,False,reject,No active Medicare Part B coverage
+91,FA-091,101,Facility A,Ruth,Patterson,Ruth Patterson,1946-07-28,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+92,FA-092,101,Facility A,Ima,Mack,Ima Mack,1944-10-24,Female,HMO,False,reject,No active Medicare Part B coverage
+93,FA-093,101,Facility A,Vera,Oates,Vera Oates,1956-10-04,Female,MCD,False,reject,No active Medicare Part B coverage
+94,FA-094,101,Facility A,Jennie,Nakamura,Jennie Nakamura,1941-06-02,Female,MCA,False,reject,No active Medicare Part B coverage
+95,FA-095,101,Facility A,Mabel,Ewing,Mabel Ewing,1940-04-22,Female,MCA,False,reject,No active Medicare Part B coverage
+96,FA-096,101,Facility A,Winnie,Dominguez,Winnie Dominguez,1933-01-29,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+97,FA-097,101,Facility A,Stella,Ivers,Stella Ivers,1945-11-03,Female,MCD,False,reject,No active Medicare Part B coverage
+98,FA-098,101,Facility A,Clifford,Kim,Clifford Kim,1955-11-14,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+99,FA-099,101,Facility A,Virginia,Rhodes,Virginia Rhodes,1930-06-09,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+100,FA-100,101,Facility A,Gilbert,Nielsen,Gilbert Nielsen,1936-07-01,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+101,FA-101,101,Facility A,Richard,Larsson,Richard Larsson,1941-02-05,Male,HMO,False,reject,No active Medicare Part B coverage
+102,FA-102,101,Facility A,Frederick,Patterson,Frederick Patterson,1933-07-21,Male,MCA,False,reject,No active Medicare Part B coverage
+103,FA-103,101,Facility A,Earl,Goldstein,Earl Goldstein,1941-03-21,Male,MCA,False,reject,No active Medicare Part B coverage
+104,FA-104,101,Facility A,Gloria,Upton,Gloria Upton,1934-02-06,Female,HMO,False,reject,No active Medicare Part B coverage
+105,FA-105,101,Facility A,Thelma,Benson,Thelma Benson,1932-11-03,Female,HMO,False,reject,No active Medicare Part B coverage
+106,FA-106,101,Facility A,Perry,Bergstrom,Perry Bergstrom,1946-03-11,Male,MCD,False,reject,No active Medicare Part B coverage
+107,FA-107,101,Facility A,Dora,Haynes,Dora Haynes,1954-09-07,Female,HMO,False,reject,No active Medicare Part B coverage
+108,FA-108,101,Facility A,Greta,Perry,Greta Perry,1943-06-23,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+109,FA-109,101,Facility A,Edna,Quinn,Edna Quinn,1949-04-17,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+110,FA-110,101,Facility A,Roberta,Newton,Roberta Newton,1951-02-19,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+111,FA-111,101,Facility A,Martha,Abbott,Martha Abbott,1945-10-14,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+112,FA-112,101,Facility A,Leona,Haynes,Leona Haynes,1936-07-06,Female,HMO,False,reject,No active Medicare Part B coverage
+113,FA-113,101,Facility A,Nathan,Tanner,Nathan Tanner,1944-07-29,Male,MCA,False,reject,No active Medicare Part B coverage
+114,FA-114,101,Facility A,Lois,Irwin,Lois Irwin,1956-04-05,Female,HMO,False,reject,No active Medicare Part B coverage
+115,FA-115,101,Facility A,Lester,Mack,Lester Mack,1930-04-05,Male,MCD,False,reject,No active Medicare Part B coverage
+116,FA-116,101,Facility A,Lewis,Patel,Lewis Patel,1943-02-19,Male,MCA,False,reject,No active Medicare Part B coverage
+117,FA-117,101,Facility A,Rosa,Ortega,Rosa Ortega,1939-01-10,Female,HMO,False,reject,No active Medicare Part B coverage
+118,FA-118,101,Facility A,Howard,Vanhook,Howard Vanhook,1942-08-01,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+119,FA-119,101,Facility A,James,Johansson,James Johansson,1930-03-09,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+120,FA-120,101,Facility A,Nathan,Beckett,Nathan Beckett,1944-01-07,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+121,FB-001,102,Facility B,Jerome,Pruitt,Jerome Pruitt,1947-12-24,Male,MCD,False,reject,No active Medicare Part B coverage
+122,FB-002,102,Facility B,Shirley,Stanton,Shirley Stanton,1936-09-10,Female,MCA,False,reject,No active Medicare Part B coverage
+123,FB-003,102,Facility B,Phyllis,Dominguez,Phyllis Dominguez,1933-03-21,Female,HMO,False,reject,No active Medicare Part B coverage
+124,FB-004,102,Facility B,Ralph,Holt,Ralph Holt,1951-08-08,Male,HMO,False,reject,No active Medicare Part B coverage
+125,FB-005,102,Facility B,Della,Okonkwo,Della Okonkwo,1943-02-02,Female,HMO,False,reject,No active Medicare Part B coverage
+126,FB-006,102,Facility B,Katherine,Figueroa,Katherine Figueroa,1935-03-16,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+127,FB-007,102,Facility B,Nettie,Abbott,Nettie Abbott,1939-11-04,Female,HMO,False,reject,No active Medicare Part B coverage
+128,FB-008,102,Facility B,Donald,Perry,Donald Perry,1952-01-27,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+129,FB-009,102,Facility B,Leon,Oates,Leon Oates,1943-01-03,Male,HMO,False,reject,No active Medicare Part B coverage
+130,FB-010,102,Facility B,Beatrice,Dunbar,Beatrice Dunbar,1936-05-08,Female,MCA,False,reject,No active Medicare Part B coverage
+131,FB-011,102,Facility B,Phyllis,Lefebvre,Phyllis Lefebvre,1957-06-22,Female,MCA,False,reject,No active Medicare Part B coverage
+132,FB-012,102,Facility B,Pearl,Haynes,Pearl Haynes,1939-05-03,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+133,FB-013,102,Facility B,Wilbur,Jensen,Wilbur Jensen,1957-05-03,Male,MCA,False,reject,No active Medicare Part B coverage
+134,FB-014,102,Facility B,Nettie,Upton,Nettie Upton,1940-10-15,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+135,FB-015,102,Facility B,Ursula,Morales,Ursula Morales,1954-03-17,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+136,FB-016,102,Facility B,Olive,Goldstein,Olive Goldstein,1932-10-28,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+137,FB-017,102,Facility B,Charlotte,Estrada,Charlotte Estrada,1931-07-23,Female,HMO,False,reject,No active Medicare Part B coverage
+138,FB-018,102,Facility B,Martha,Kowalski,Martha Kowalski,1954-02-25,Female,MCA,False,reject,No active Medicare Part B coverage
+139,FB-019,102,Facility B,Beverly,Ferreira,Beverly Ferreira,1947-02-15,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+140,FB-020,102,Facility B,Bernard,Okonkwo,Bernard Okonkwo,1942-03-26,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+141,FB-021,102,Facility B,Monroe,Yuen,Monroe Yuen,1945-05-06,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+142,FB-022,102,Facility B,Shirley,Ewing,Shirley Ewing,1942-06-11,Female,MCD,False,reject,No active Medicare Part B coverage
+143,FB-023,102,Facility B,Merton,Oates,Merton Oates,1956-12-06,Male,HMO,False,reject,No active Medicare Part B coverage
+144,FB-024,102,Facility B,Philip,Haines,Philip Haines,1945-12-22,Male,MCA,False,reject,No active Medicare Part B coverage
+145,FB-025,102,Facility B,Ethel,Newton,Ethel Newton,1944-02-10,Female,MCA,False,reject,No active Medicare Part B coverage
+146,FB-026,102,Facility B,Maurice,Kowalski,Maurice Kowalski,1932-12-09,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+147,FB-027,102,Facility B,Elmer,Ingram,Elmer Ingram,1945-07-31,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+148,FB-028,102,Facility B,Charlotte,Ivers,Charlotte Ivers,1941-12-22,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+149,FB-029,102,Facility B,Greta,Babatunde,Greta Babatunde,1944-01-22,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+150,FB-030,102,Facility B,Patricia,Ingram,Patricia Ingram,1937-03-10,Female,MCA,False,reject,No active Medicare Part B coverage
+151,FB-031,102,Facility B,Greta,Webb,Greta Webb,1948-05-28,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+152,FB-032,102,Facility B,Calvin,Christodoulou,Calvin Christodoulou,1949-05-07,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+153,FB-033,102,Facility B,Gilbert,Christodoulou,Gilbert Christodoulou,1934-01-08,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+154,FB-034,102,Facility B,Mabel,Abbott,Mabel Abbott,1934-03-14,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+155,FB-035,102,Facility B,Russel,Carpenter,Russel Carpenter,1955-07-14,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+156,FB-036,102,Facility B,Velma,Zimmerman,Velma Zimmerman,1950-10-17,Female,HMO,False,reject,No active Medicare Part B coverage
+157,FB-037,102,Facility B,Oliver,Mack,Oliver Mack,1941-11-21,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+158,FB-038,102,Facility B,Elmer,Medina,Elmer Medina,1935-03-24,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+159,FB-039,102,Facility B,Gloria,Sanchez,Gloria Sanchez,1938-08-16,Female,MCA,False,reject,No active Medicare Part B coverage
+160,FB-040,102,Facility B,Velma,Kane,Velma Kane,1934-09-03,Female,HMO,False,reject,No active Medicare Part B coverage
+161,FB-041,102,Facility B,Jennie,Ivers,Jennie Ivers,1948-05-12,Female,MCA,False,reject,No active Medicare Part B coverage
+162,FB-042,102,Facility B,Velma,Dawson,Velma Dawson,1944-01-03,Female,MCD,False,reject,No active Medicare Part B coverage
+163,FB-043,102,Facility B,Queenie,Jensen,Queenie Jensen,1950-01-05,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+164,FB-044,102,Facility B,Walter,Babatunde,Walter Babatunde,1954-07-24,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+165,FB-045,102,Facility B,Hubert,Medina,Hubert Medina,1935-05-25,Male,HMO,False,reject,No active Medicare Part B coverage
+166,FB-046,102,Facility B,Tillie,Warren,Tillie Warren,1952-08-17,Female,MCA,False,reject,No active Medicare Part B coverage
+167,FB-047,102,Facility B,Wilfred,Nielsen,Wilfred Nielsen,1939-07-18,Male,MCD,False,reject,No active Medicare Part B coverage
+168,FB-048,102,Facility B,Samuel,Babatunde,Samuel Babatunde,1945-11-01,Male,MCA,False,reject,No active Medicare Part B coverage
+169,FB-049,102,Facility B,Edgar,Vance,Edgar Vance,1931-01-14,Male,HMO,False,reject,No active Medicare Part B coverage
+170,FB-050,102,Facility B,Jesse,Nguyen,Jesse Nguyen,1934-11-02,Male,MCA,False,reject,No active Medicare Part B coverage
+171,FB-051,102,Facility B,Vera,Reyes,Vera Reyes,1931-03-02,Female,MCA,False,reject,No active Medicare Part B coverage
+172,FB-052,102,Facility B,Monroe,Xiong,Monroe Xiong,1944-11-08,Male,MCD,False,reject,No active Medicare Part B coverage
+173,FB-053,102,Facility B,Donald,Kim,Donald Kim,1941-10-02,Male,HMO,False,reject,No active Medicare Part B coverage
+174,FB-054,102,Facility B,Dorothy,Garrison,Dorothy Garrison,1957-08-20,Female,MCD,False,reject,No active Medicare Part B coverage
+175,FB-055,102,Facility B,Fannie,Jensen,Fannie Jensen,1943-09-23,Female,MCA,False,reject,No active Medicare Part B coverage
+176,FB-056,102,Facility B,Edgar,Zuniga,Edgar Zuniga,1957-02-04,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+177,FB-057,102,Facility B,Russel,Ibarra,Russel Ibarra,1931-01-16,Male,MCD,False,reject,No active Medicare Part B coverage
+178,FB-058,102,Facility B,Melvin,Hoffman,Melvin Hoffman,1930-05-02,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+179,FB-059,102,Facility B,Una,Haynes,Una Haynes,1944-08-16,Female,MCA,False,reject,No active Medicare Part B coverage
+180,FB-060,102,Facility B,Ethel,Xiong,Ethel Xiong,1943-10-31,Female,MCA,False,reject,No active Medicare Part B coverage
+181,FB-061,102,Facility B,Preston,Marsh,Preston Marsh,1946-07-21,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+182,FB-062,102,Facility B,Oscar,Hoffman,Oscar Hoffman,1936-10-20,Male,MCA,False,reject,No active Medicare Part B coverage
+183,FB-063,102,Facility B,Ida,Kelley,Ida Kelley,1937-11-30,Female,MCD,False,reject,No active Medicare Part B coverage
+184,FB-064,102,Facility B,Chester,Tanner,Chester Tanner,1943-10-23,Male,HMO,False,reject,No active Medicare Part B coverage
+185,FB-065,102,Facility B,Lloyd,Espinoza,Lloyd Espinoza,1955-09-08,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+186,FB-066,102,Facility B,Rosie,Tanner,Rosie Tanner,1934-07-10,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+187,FB-067,102,Facility B,Thelma,Vance,Thelma Vance,1949-12-06,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+188,FB-068,102,Facility B,Melvin,Kim,Melvin Kim,1941-07-22,Male,HMO,False,reject,No active Medicare Part B coverage
+189,FB-069,102,Facility B,Tillie,Webb,Tillie Webb,1950-06-12,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+190,FB-070,102,Facility B,Garland,Reyes,Garland Reyes,1937-05-05,Male,MCD,False,reject,No active Medicare Part B coverage
+191,FB-071,102,Facility B,Martha,Ibarra,Martha Ibarra,1955-09-14,Female,MCD,False,reject,No active Medicare Part B coverage
+192,FB-072,102,Facility B,Mildred,Babatunde,Mildred Babatunde,1952-09-14,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+193,FB-073,102,Facility B,Perry,Yuen,Perry Yuen,1938-08-23,Male,HMO,False,reject,No active Medicare Part B coverage
+194,FB-074,102,Facility B,Velma,Aldridge,Velma Aldridge,1936-12-22,Female,HMO,False,reject,No active Medicare Part B coverage
+195,FB-075,102,Facility B,Eleanor,Aldridge,Eleanor Aldridge,1949-01-23,Female,HMO,False,reject,No active Medicare Part B coverage
+196,FB-076,102,Facility B,Harvey,Hoffman,Harvey Hoffman,1933-10-20,Male,MCD,False,reject,No active Medicare Part B coverage
+197,FB-077,102,Facility B,Hazel,Okonkwo,Hazel Okonkwo,1945-05-07,Female,MCA,False,reject,No active Medicare Part B coverage
+198,FB-078,102,Facility B,Irving,Watts,Irving Watts,1932-02-19,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+199,FB-079,102,Facility B,Edna,Coleman,Edna Coleman,1957-10-07,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+200,FB-080,102,Facility B,Hubert,Zuniga,Hubert Zuniga,1953-07-21,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+201,FB-081,102,Facility B,Donald,Obrien,Donald Obrien,1930-09-14,Male,MCD,False,reject,No active Medicare Part B coverage
+202,FB-082,102,Facility B,Edna,Kelley,Edna Kelley,1941-01-01,Female,MCA,False,reject,No active Medicare Part B coverage
+203,FB-083,102,Facility B,Sadie,Castillo,Sadie Castillo,1934-12-10,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+204,FB-084,102,Facility B,Melvin,Oduya,Melvin Oduya,1934-01-21,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+205,FB-085,102,Facility B,Ada,Jennings,Ada Jennings,1940-11-17,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+206,FB-086,102,Facility B,Lewis,Aldridge,Lewis Aldridge,1941-07-29,Male,MCD,False,reject,No active Medicare Part B coverage
+207,FB-087,102,Facility B,Celia,Kerr,Celia Kerr,1951-09-14,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+208,FB-088,102,Facility B,Francis,Jacobs,Francis Jacobs,1935-11-20,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+209,FB-089,102,Facility B,Celia,Tanner,Celia Tanner,1931-10-11,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+210,FB-090,102,Facility B,Morris,Tanner,Morris Tanner,1939-07-16,Male,HMO,False,reject,No active Medicare Part B coverage
+211,FC-001,103,Facility C,Alice,Kelley,Alice Kelley,1945-05-05,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+212,FC-002,103,Facility C,Floyd,Abbott,Floyd Abbott,1939-05-30,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+213,FC-003,103,Facility C,Olive,Jennings,Olive Jennings,1939-07-04,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+214,FC-004,103,Facility C,Robert,Yuen,Robert Yuen,1937-02-08,Male,MCA,False,reject,No active Medicare Part B coverage
+215,FC-005,103,Facility C,Fannie,Lefebvre,Fannie Lefebvre,1952-01-11,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+216,FC-006,103,Facility C,Melvin,Simmons,Melvin Simmons,1938-12-09,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+217,FC-007,103,Facility C,Maurice,Ivers,Maurice Ivers,1943-03-02,Male,MCD,False,reject,No active Medicare Part B coverage
+218,FC-008,103,Facility C,Della,Medina,Della Medina,1942-10-15,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+219,FC-009,103,Facility C,Katherine,Jacobs,Katherine Jacobs,1931-12-07,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+220,FC-010,103,Facility C,Vera,Ingram,Vera Ingram,1956-06-28,Female,MCD,False,reject,No active Medicare Part B coverage
+221,FC-011,103,Facility C,Emil,Jensen,Emil Jensen,1936-10-03,Male,MCA,False,reject,No active Medicare Part B coverage
+222,FC-012,103,Facility C,Richard,Xiong,Richard Xiong,1940-09-14,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+223,FC-013,103,Facility C,Sidney,Yuen,Sidney Yuen,1956-09-21,Male,MCA,False,reject,No active Medicare Part B coverage
+224,FC-014,103,Facility C,Harvey,Sanchez,Harvey Sanchez,1932-11-24,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+225,FC-015,103,Facility C,Paul,Jefferson,Paul Jefferson,1943-12-10,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+226,FC-016,103,Facility C,George,Kowalski,George Kowalski,1932-06-15,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+227,FC-017,103,Facility C,Queenie,Simmons,Queenie Simmons,1943-01-04,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+228,FC-018,103,Facility C,Stanley,Yuen,Stanley Yuen,1944-07-15,Male,MCD,False,reject,No active Medicare Part B coverage
+229,FC-019,103,Facility C,Frederick,Hoffman,Frederick Hoffman,1937-04-09,Male,MCA,False,reject,No active Medicare Part B coverage
+230,FC-020,103,Facility C,Naomi,Yamamoto,Naomi Yamamoto,1953-12-21,Female,MCD,False,reject,No active Medicare Part B coverage
+231,FC-021,103,Facility C,George,Frazier,George Frazier,1946-12-03,Male,HMO,False,reject,No active Medicare Part B coverage
+232,FC-022,103,Facility C,Grover,Stanton,Grover Stanton,1935-06-29,Male,HMO,False,reject,No active Medicare Part B coverage
+233,FC-023,103,Facility C,Homer,Medina,Homer Medina,1947-03-01,Male,MCA,False,reject,No active Medicare Part B coverage
+234,FC-024,103,Facility C,Woodrow,Quinn,Woodrow Quinn,1941-03-28,Male,HMO,False,reject,No active Medicare Part B coverage
+235,FC-025,103,Facility C,Thelma,Gibson,Thelma Gibson,1946-08-29,Female,HMO,False,reject,No active Medicare Part B coverage
+236,FC-026,103,Facility C,Irving,Yates,Irving Yates,1940-11-26,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+237,FC-027,103,Facility C,Opal,Dominguez,Opal Dominguez,1937-06-25,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+238,FC-028,103,Facility C,Donald,Warren,Donald Warren,1956-05-19,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+239,FC-029,103,Facility C,Eleanor,Tanner,Eleanor Tanner,1931-02-27,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+240,FC-030,103,Facility C,Katherine,Rhodes,Katherine Rhodes,1936-10-17,Female,MCA,False,reject,No active Medicare Part B coverage
+241,FC-031,103,Facility C,Harvey,Jefferson,Harvey Jefferson,1948-06-25,Male,HMO,False,reject,No active Medicare Part B coverage
+242,FC-032,103,Facility C,Beatrice,Medina,Beatrice Medina,1953-08-15,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+243,FC-033,103,Facility C,Dora,Medina,Dora Medina,1952-04-18,Female,HMO,False,reject,No active Medicare Part B coverage
+244,FC-034,103,Facility C,Preston,Morales,Preston Morales,1944-06-08,Male,MCA,False,reject,No active Medicare Part B coverage
+245,FC-035,103,Facility C,Theodore,Castillo,Theodore Castillo,1953-07-10,Male,HMO,False,reject,No active Medicare Part B coverage
+246,FC-036,103,Facility C,Nathan,Tillman,Nathan Tillman,1951-03-28,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+247,FC-037,103,Facility C,Gilbert,Haynes,Gilbert Haynes,1945-07-09,Male,HMO,False,reject,No active Medicare Part B coverage
+248,FC-038,103,Facility C,Mamie,Ortega,Mamie Ortega,1932-10-18,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+249,FC-039,103,Facility C,Ida,Vega,Ida Vega,1938-07-28,Female,HMO,False,reject,No active Medicare Part B coverage
+250,FC-040,103,Facility C,Queenie,Nakamura,Queenie Nakamura,1950-12-17,Female,MCD,False,reject,No active Medicare Part B coverage
+251,FC-041,103,Facility C,George,Nkrumah,George Nkrumah,1943-11-16,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+252,FC-042,103,Facility C,Inez,Jefferson,Inez Jefferson,1947-11-11,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+253,FC-043,103,Facility C,Perry,Johansson,Perry Johansson,1957-01-28,Male,MCA,False,reject,No active Medicare Part B coverage
+254,FC-044,103,Facility C,Yolanda,Lefebvre,Yolanda Lefebvre,1935-08-28,Female,HMO,False,reject,No active Medicare Part B coverage
+255,FC-045,103,Facility C,Roland,Christodoulou,Roland Christodoulou,1942-04-29,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+256,FC-046,103,Facility C,Paul,Torres,Paul Torres,1944-02-23,Male,MCA,False,reject,No active Medicare Part B coverage
+257,FC-047,103,Facility C,Hubert,Barker,Hubert Barker,1953-11-20,Male,MCA,False,reject,No active Medicare Part B coverage
+258,FC-048,103,Facility C,Lewis,Warren,Lewis Warren,1938-08-29,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+259,FC-049,103,Facility C,Olive,Mack,Olive Mack,1947-11-15,Female,HMO,False,reject,No active Medicare Part B coverage
+260,FC-050,103,Facility C,Celia,Ortega,Celia Ortega,1943-09-02,Female,MCA,False,reject,No active Medicare Part B coverage
+261,FC-051,103,Facility C,Xenia,Larsson,Xenia Larsson,1939-02-01,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+262,FC-052,103,Facility C,Queenie,Hoffman,Queenie Hoffman,1934-06-25,Female,MCD,False,reject,No active Medicare Part B coverage
+263,FC-053,103,Facility C,Robert,Haynes,Robert Haynes,1953-10-17,Male,MCA,False,reject,No active Medicare Part B coverage
+264,FC-054,103,Facility C,Calvin,Xavier,Calvin Xavier,1955-01-13,Male,MCD,False,reject,No active Medicare Part B coverage
+265,FC-055,103,Facility C,Raymond,Nakamura,Raymond Nakamura,1933-01-19,Male,HMO,False,reject,No active Medicare Part B coverage
+266,FC-056,103,Facility C,Edna,Haynes,Edna Haynes,1949-05-01,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+267,FC-057,103,Facility C,Charlotte,Vega,Charlotte Vega,1938-02-23,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+268,FC-058,103,Facility C,Mabel,Tanner,Mabel Tanner,1957-02-17,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+269,FC-059,103,Facility C,Oliver,Jennings,Oliver Jennings,1937-01-24,Male,MCA,False,reject,No active Medicare Part B coverage
+270,FC-060,103,Facility C,Rosie,Upton,Rosie Upton,1955-08-17,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+271,FC-061,103,Facility C,Francis,Jensen,Francis Jensen,1950-05-01,Male,MCD,False,reject,No active Medicare Part B coverage
+272,FC-062,103,Facility C,Yolanda,Chandler,Yolanda Chandler,1954-03-14,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+273,FC-063,103,Facility C,Bernard,Garrison,Bernard Garrison,1940-11-16,Male,MCA,False,reject,No active Medicare Part B coverage
+274,FC-064,103,Facility C,Dora,Obrien,Dora Obrien,1935-01-23,Female,HMO,False,reject,No active Medicare Part B coverage
+275,FC-065,103,Facility C,Della,Lefebvre,Della Lefebvre,1935-04-09,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+276,FC-066,103,Facility C,Donald,Upton,Donald Upton,1933-12-27,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+277,FC-067,103,Facility C,Clifford,Nakamura,Clifford Nakamura,1947-04-13,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+278,FC-068,103,Facility C,Thelma,Oneal,Thelma Oneal,1941-01-28,Female,MCD,False,reject,No active Medicare Part B coverage
+279,FC-069,103,Facility C,Wilbur,Haynes,Wilbur Haynes,1954-03-17,Male,HMO,False,reject,No active Medicare Part B coverage
+280,FC-070,103,Facility C,Philip,Ortega,Philip Ortega,1933-08-29,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+281,FC-071,103,Facility C,Una,Vanhook,Una Vanhook,1949-12-19,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+282,FC-072,103,Facility C,Arthur,Tanner,Arthur Tanner,1934-09-06,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+283,FC-073,103,Facility C,Donald,Frazier,Donald Frazier,1940-03-30,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+284,FC-074,103,Facility C,Berta,Upton,Berta Upton,1939-01-03,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+285,FC-075,103,Facility C,Lillian,Webb,Lillian Webb,1932-12-03,Female,MCA,False,reject,No active Medicare Part B coverage
+286,FC-076,103,Facility C,Frederick,Oduya,Frederick Oduya,1942-11-13,Male,HMO,False,reject,No active Medicare Part B coverage
+287,FC-077,103,Facility C,Albert,Perry,Albert Perry,1943-10-08,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+288,FC-078,103,Facility C,Gordon,Zimmerman,Gordon Zimmerman,1937-11-10,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+289,FC-079,103,Facility C,Raymond,Marsh,Raymond Marsh,1956-06-24,Male,MCA,False,reject,No active Medicare Part B coverage
+290,FC-080,103,Facility C,Stella,Warren,Stella Warren,1935-02-03,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+291,FC-081,103,Facility C,Edna,Goldstein,Edna Goldstein,1938-05-23,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+292,FC-082,103,Facility C,Gilbert,Pruitt,Gilbert Pruitt,1950-04-14,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+293,FC-083,103,Facility C,Norman,Patel,Norman Patel,1944-07-02,Male,HMO,False,reject,No active Medicare Part B coverage
+294,FC-084,103,Facility C,Edgar,Christodoulou,Edgar Christodoulou,1944-06-08,Male,HMO,False,reject,No active Medicare Part B coverage
+295,FC-085,103,Facility C,Carol,Acosta,Carol Acosta,1952-08-12,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+296,FC-086,103,Facility C,Clifford,Diaz,Clifford Diaz,1944-08-26,Male,MCD,False,reject,No active Medicare Part B coverage
+297,FC-087,103,Facility C,Frank,Kaczmarek,Frank Kaczmarek,1939-10-29,Male,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+298,FC-088,103,Facility C,Morris,Reyes,Morris Reyes,1952-12-16,Male,MCA,False,reject,No active Medicare Part B coverage
+299,FC-089,103,Facility C,Jennie,Dunbar,Jennie Dunbar,1946-09-22,Female,MCB,True,pending_wound_review,Active Medicare Part B — proceed to wound data extraction
+300,FC-090,103,Facility C,Marguerite,Zuniga,Marguerite Zuniga,1942-08-19,Female,HMO,False,reject,No active Medicare Part B coverage
