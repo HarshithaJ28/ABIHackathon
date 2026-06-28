@@ -1,130 +1,109 @@
-"""P1 — Data ingestion from the PCC mock API.
+"""P1 — Adaptive data ingestion from the PCC mock API.
 
-Fetches all 5 raw tables and saves them to data/raw/. Handles the two-ID mapping:
-
-patient_id (str like "FA-001") → /diagnoses, /coverage
-id (int like 1) → /notes, /assessments
+Drop-in replacement for the old serial ingestion. Same output contract:
+data/raw/{patients,diagnoses,coverage,notes,assessments}.json + id_lookup.
 """
 
-from typing import Union
+from __future__ import annotations
 
+import asyncio
 import json
 import os
+from typing import Dict, List
 
-from config import FACILITY_IDS
-from src.api_client import api_get
+from rich.console import Group
+from rich.live import Live
+from rich.panel import Panel
+from rich.progress import BarColumn, Progress, TextColumn, TimeElapsedColumn
+from rich.table import Table
+
+from config import CONCURRENCY_MAX, FACILITY_IDS
+from src.engine import Job, Stats, run_jobs
 
 RAW_DIR = "data/raw"
 
 
-def fetch_all_patients() -> list[dict]:
-    """Fetch all patients across all 3 facilities."""
-    all_patients = []
+def _render(stats: Stats, progress: Progress, task_id) -> Panel:
+    progress.update(task_id, completed=stats.completed, total=max(stats.total, 1))
 
-    for facility_id in FACILITY_IDS:
-        print(f"Fetching patients for facility {facility_id}...")
-        patients = api_get("/pcc/patients", {"facility_id": facility_id})
-        print(f" → {len(patients)} patients")
-        all_patients.extend(patients)
+    table = Table.grid(padding=(0, 2))
+    table.add_column(justify="right", style="bold cyan")
+    table.add_column()
+    bar_len = 24
+    filled = int(bar_len * min(stats.limit, CONCURRENCY_MAX) / CONCURRENCY_MAX)
+    conc_bar = "█" * filled + "░" * (bar_len - filled)
 
-    print(f"Total patients: {len(all_patients)}\n")
-    return all_patients
+    table.add_row("Concurrency", f"{conc_bar} {stats.limit:>3}  (in-flight {stats.inflight})")
+    table.add_row("Throughput", f"{stats.rps:6.1f} req/s")
+    table.add_row("Latency p50", f"{stats.p50_ms:6.1f} ms")
+    table.add_row("429 absorbed", f"{stats.throttled}  (rate {stats.throttle_rate * 100:4.1f}%)")
+    table.add_row("Attempts", f"{stats.attempts}  for {stats.completed} records")
+    table.add_row("Failures", f"[red]{stats.failed}[/red]" if stats.failed else "[green]0[/green]")
 
-
-def fetch_all_diagnoses(patients: list) -> dict:
-    """Fetch diagnoses for every patient.
-
-    Uses patient_id (STRING like "FA-001").
-
-    Returns:
-        { "FA-001": [...], "FA-002": [...], ... }
-    """
-    result = {}
-    total = len(patients)
-
-    print(f"Fetching diagnoses for {total} patients...")
-    for i, patient in enumerate(patients):
-        pid = patient["patient_id"]
-        if (i + 1) % 50 == 0:
-            print(f" Progress: {i + 1}/{total}")
-        result[pid] = api_get("/pcc/diagnoses", {"patient_id": pid})
-
-    print(f"Diagnoses fetched for all {total} patients\n")
-    return result
+    return Panel(
+        Group(progress, table),
+        title="[bold]P1 · Adaptive Ingestion Engine[/bold]",
+        border_style="cyan",
+    )
 
 
-def fetch_all_coverage(patients: list) -> dict:
-    """Fetch coverage for every patient.
+async def _ingest_async() -> Dict[str, object]:
+    stats = Stats()
+    progress = Progress(
+        TextColumn("[bold]Fetching"),
+        BarColumn(bar_width=40),
+        TextColumn("{task.completed}/{task.total}"),
+        TimeElapsedColumn(),
+    )
+    task_id = progress.add_task("ingest", total=1)
 
-    Uses patient_id (STRING like "FA-001").
+    facility_jobs = [
+        Job(
+            key=facility_id,
+            endpoint="/pcc/patients",
+            params={"facility_id": facility_id},
+            bucket="patients",
+        )
+        for facility_id in FACILITY_IDS
+    ]
 
-    Returns:
-        { "FA-001": [...], "FA-002": [...], ... }
-    """
-    result = {}
-    total = len(patients)
+    with Live(_render(stats, progress, task_id), refresh_per_second=12) as live:
 
-    print(f"Fetching coverage for {total} patients...")
-    for i, patient in enumerate(patients):
-        pid = patient["patient_id"]
-        if (i + 1) % 50 == 0:
-            print(f" Progress: {i + 1}/{total}")
-        result[pid] = api_get("/pcc/coverage", {"patient_id": pid})
+        async def tick(current_stats: Stats) -> None:
+            live.update(_render(current_stats, progress, task_id))
 
-    print(f"Coverage fetched for all {total} patients\n")
-    return result
+        facility_results = await run_jobs(facility_jobs, stats, on_tick=tick)
+        patients: List[dict] = []
+        for facility_id in FACILITY_IDS:
+            patients.extend(facility_results["patients"].get(facility_id, []))
 
+        jobs: List[Job] = []
+        for patient in patients:
+            patient_id_str = patient["patient_id"]
+            patient_id_int = patient["id"]
+            jobs.append(Job(patient_id_str, "/pcc/diagnoses", {"patient_id": patient_id_str}, "diagnoses"))
+            jobs.append(Job(patient_id_str, "/pcc/coverage", {"patient_id": patient_id_str}, "coverage"))
+            jobs.append(Job(patient_id_int, "/pcc/notes", {"patient_id": patient_id_int}, "notes"))
+            jobs.append(Job(patient_id_int, "/pcc/assessments", {"patient_id": patient_id_int}, "assessments"))
 
-def fetch_all_notes(patients: list) -> dict:
-    """Fetch progress notes for every patient.
+        stats2 = Stats()
 
-    Uses id (INTEGER like 1) — NOT patient_id.
-    The API param is called patient_id but takes the integer id.
+        async def tick2(current_stats: Stats) -> None:
+            live.update(_render(current_stats, progress, task_id))
 
-    Returns:
-        { 1: [...], 2: [...], ... }
-    """
-    result = {}
-    total = len(patients)
+        results = await run_jobs(jobs, stats2, on_tick=tick2)
 
-    print(f"Fetching notes for {total} patients...")
-    for i, patient in enumerate(patients):
-        int_id = patient["id"]
-        if (i + 1) % 50 == 0:
-            print(f" Progress: {i + 1}/{total}")
-        result[int_id] = api_get("/pcc/notes", {"patient_id": int_id})
-
-    print(f"Notes fetched for all {total} patients\n")
-    return result
-
-
-def fetch_all_assessments(patients: list) -> dict:
-    """Fetch wound assessments for every patient.
-
-    Uses id (INTEGER like 1) — NOT patient_id.
-    The API param is called patient_id but takes the integer id.
-
-    Returns:
-        { 1: [...], 2: [...], ... }
-    """
-    result = {}
-    total = len(patients)
-
-    print(f"Fetching assessments for {total} patients...")
-    for i, patient in enumerate(patients):
-        int_id = patient["id"]
-        if (i + 1) % 50 == 0:
-            print(f" Progress: {i + 1}/{total}")
-        result[int_id] = api_get("/pcc/assessments", {"patient_id": int_id})
-
-    print(f"Assessments fetched for all {total} patients\n")
-    return result
+    return {
+        "patients": patients,
+        "diagnoses": results.get("diagnoses", {}),
+        "coverage": results.get("coverage", {}),
+        "notes": results.get("notes", {}),
+        "assessments": results.get("assessments", {}),
+    }
 
 
-def save_raw_data(patients, diagnoses, coverage, notes, assessments):
-    """Save all raw API responses to data/raw/ as JSON."""
+def save_raw_data(patients, diagnoses, coverage, notes, assessments) -> None:
     os.makedirs(RAW_DIR, exist_ok=True)
-
     files = {
         "patients.json": patients,
         "diagnoses.json": diagnoses,
@@ -134,52 +113,36 @@ def save_raw_data(patients, diagnoses, coverage, notes, assessments):
     }
 
     for filename, data in files.items():
-        filepath = os.path.join(RAW_DIR, filename)
-        with open(filepath, "w") as f:
-            # Convert int keys to strings for JSON serialization
-            if isinstance(data, dict):
-                serializable = {str(k): v for k, v in data.items()}
-            else:
-                serializable = data
-            json.dump(serializable, f, indent=2)
-        print(f" Saved {filepath}")
-
-    print()
+        path = os.path.join(RAW_DIR, filename)
+        with open(path, "w") as file_handle:
+            serializable = {str(key): value for key, value in data.items()} if isinstance(data, dict) else data
+            json.dump(serializable, file_handle, indent=2)
+        print(f"  Saved {path}")
 
 
-def run_ingestion():
-    """Main ingestion entry point.
-
-    Fetches all 5 endpoints, saves raw JSON.
-    Returns all data for downstream use.
-    """
+def run_ingestion() -> Dict[str, object]:
+    """Synchronous entry point — same contract the pipeline already uses."""
     print("=" * 50)
-    print("P1 — DATA INGESTION")
+    print("P1 — ADAPTIVE DATA INGESTION")
     print("=" * 50 + "\n")
 
-    patients = fetch_all_patients()
-    diagnoses = fetch_all_diagnoses(patients)
-    coverage = fetch_all_coverage(patients)
-    notes = fetch_all_notes(patients)
-    assessments = fetch_all_assessments(patients)
+    data = asyncio.run(_ingest_async())
 
+    print(f"\nTotal patients: {len(data['patients'])}")
     print("Saving raw data...")
-    save_raw_data(patients, diagnoses, coverage, notes, assessments)
+    save_raw_data(
+        data["patients"],
+        data["diagnoses"],
+        data["coverage"],
+        data["notes"],
+        data["assessments"],
+    )
 
-    # Build the ID lookup so downstream code can map between the two IDs
-    # This is the key thing P1 owns — nobody else should have to think about this
-    id_lookup = {}
-    for p in patients:
-        id_lookup[p["patient_id"]] = p["id"]  # "FA-001" → 1
-        id_lookup[p["id"]] = p["patient_id"]  # 1 → "FA-001"
-
-    return {
-        "patients": patients,
-        "diagnoses": diagnoses,
-        "coverage": coverage,
-        "notes": notes,
-        "assessments": assessments,
-        "id_lookup": id_lookup,
-    }
+    id_lookup: Dict[object, object] = {}
+    for patient in data["patients"]:
+        id_lookup[patient["patient_id"]] = patient["id"]
+        id_lookup[patient["id"]] = patient["patient_id"]
+    data["id_lookup"] = id_lookup
+    return data
 
 
